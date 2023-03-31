@@ -87,11 +87,66 @@
                             text: 'Export ke Excel',
                             title: 'Laporan Barang Masuk' ,
                             messageTop: 'Departement : Insert & Backend Production',
-                            customize: function (xlsx) {
-                                var sheet = xlsx.xl.worksheets['sheet1.xml'];
- 
-                                // jQuery selector to add a border
-                                $('row c[r*="10"]', sheet).attr( 's', '25' );
+                            excelStyles: [                      // Add an excelStyles definition
+                                {                 
+                                    template: [
+                                        "gold_medium",      // Apply the 'gold_medium' template to the entire table
+                                        "header_cyan"
+                                    ] // Apply the "green_medium" template
+                                },
+                                {
+                                    cells: "sh",                // Use Smart References (s) to target the header row (h)
+                                    style: {                    // The style definition
+                                        font: {
+                                            name:'Poppins',                 // Style the font
+                                            size: 10,           // Size 14
+                                            b: true,           // Turn off the default bolding of the header row
+                                        },
+                                        fill: {                 // Style the cell fill
+                                            pattern: {          // Add a pattern (default is solid)
+                                                color: "1C3144" // Define the fill color
+                                            }
+                                        },
+                                        alignment: {
+                                            vertical: "center",
+                                            horizontal: "center",
+                                            wrapText: true,
+                                        },
+                                        border: {
+                                            top: 'thin',
+                                            bottom: 'thin',
+                                            left: 'thin',
+                                            right: 'thin',
+                                        }
+                                    }
+                                }
+                            ],
+                            pageStyle: {
+                                sheetPr: {
+                                    pageSetUpPr: {
+                                        fitToPage: 1            // Fit the printing to the page
+                                    } 
+                                },
+                                printOptions: {
+                                    horizontalCentered: true,
+                                    verticalCentered: true,
+                                },
+                                pageSetup: {
+                                    orientation: "landscape",   // Orientation
+                                    paperSize: "9",             // Paper size (1 = Letter, 9 = A4)
+                                    fitToWidth: "1",            // Fit to page width
+                                    fitToHeight: "0",           // Fit to page height
+                                },
+                                pageMargins: {
+                                    left: "0.2",
+                                    right: "0.2",
+                                    top: "0.4",
+                                    bottom: "0.4",
+                                    header: "0",
+                                    footer: "0",
+                                },
+                                repeatHeading: true,    // Repeat the heading row at the top of each page
+                                repeatCol: 'A:A',       // Repeat column A (for pages wider than a single printed page)
                             },
                             exportOptions: {
                                 columns: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19],
