@@ -47,7 +47,6 @@ Route::group(['middleware' => 'auth'], function (){
     Route::put('/barang-keluars/update-barang-keluars/{id}',[BarangKeluarController::class,'update'])->name('update-barang-keluars');
     Route::get('/barang-keluars/delete-barang-keluars/{id}',[BarangKeluarController::class,'destroy'])->name('delete-barang-keluars');
 
-
 });
 
 

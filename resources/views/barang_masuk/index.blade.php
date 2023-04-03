@@ -1,7 +1,7 @@
 @extends('dashboard')
 
 @section('title')
-    Index
+    Bagian Index
 @endsection
 
 @push('end-style')
