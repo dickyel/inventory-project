@@ -40,13 +40,6 @@ Route::group(['middleware' => 'auth'], function (){
     Route::put('/barang-masuks/update-barang-masuks/{id}',[BarangMasukController::class,'update'])->name('update-barang-masuks');
     Route::get('/barang-masuks/delete-barang-masuks/{id}',[BarangMasukController::class,'destroy'])->name('delete-barang-masuks');
 
-    Route::get('/barang-keluars',[BarangKeluarController::class,'index'])->name('index-barang-keluars');
-    Route::get('/barang-keluars/create-barang-keluars',[BarangKeluarController::class,'create'])->name('add-barang-keluars');
-    Route::post('/barang-keluars/save-barang-keluars',[BarangKeluarController::class,'save'])->name('save-barang-keluars');
-    Route::get('/barang-keluars/edit-barang-keluars/{id}',[BarangKeluarController::class,'edit'])->name('edit-barang-keluars');
-    Route::put('/barang-keluars/update-barang-keluars/{id}',[BarangKeluarController::class,'update'])->name('update-barang-keluars');
-    Route::get('/barang-keluars/delete-barang-keluars/{id}',[BarangKeluarController::class,'destroy'])->name('delete-barang-keluars');
-
 });
 
 

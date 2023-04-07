@@ -1,6 +1,7 @@
 
 <script type="text/javascript" src="{{ asset('https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js') }}"></script>
 
+
 <script>
     const navbar = document.querySelector('.col-navbar')
     const cover = document.querySelector('.screen-cover')
@@ -21,6 +22,7 @@
     }
 </script>
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
 <script type="text/javascript" src="{{ asset('https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js') }}"></script>
 <script type="text/javascript" src="{{ asset('https://cdn.datatables.net/1.10.25/js/dataTables.bootstrap5.min.js') }}"></script>
 <script src="https://cdn.jsdelivr.net/npm/datatables-buttons-excel-styles@1.2.0/js/buttons.html5.styles.min.js"></script>

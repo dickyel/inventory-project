@@ -31,7 +31,7 @@
                             <table class="table table-hover scroll-horizontal-vertical w-100" id="crudTable">
                                 <thead>
                                     <tr>
-                                        <th>No</th>
+                                      
                                         <th>Tanggal Masuk</th>
                                         <th>Nama Line</th>
                                         <th>Customer</th>
@@ -85,7 +85,7 @@
                         {
                             extend: 'excelHtml5',
                             text: 'Export ke Excel',
-                            title: 'Laporan Barang Masuk' ,
+                            title: 'Laporan Production' ,
                             messageTop: 'Departement : Insert & Backend Production',
                             excelStyles: [                      // Add an excelStyles definition
                                 {                 
@@ -149,7 +149,7 @@
                                 repeatCol: 'A:A',       // Repeat column A (for pages wider than a single printed page)
                             },
                             exportOptions: {
-                                columns: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19],
+                                columns: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18],
                                 format: {
                                     body:function(data,row,column,node){
                                         return data;
@@ -174,7 +174,7 @@
                                 doc.pageOrientation = 'landscape';
                             },
                             exportOptions: {
-                                columns: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19],
+                                columns: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18],
                                 format: {
                                     body:function(data,row,column,node){
                                         return data;
@@ -187,15 +187,11 @@
                         url: '{!! url()->current() !!}',
                     },
                     columns: [
-                        
-                        {
-                            data: 'id', name: 'id'
-                        },
                         {
                             data: 'tanggal_masuk_barang', name: 'tanggal_masuk_barang'
                         },
                         {
-                            data: 'user.nama_line', name: 'user.nama_line'
+                            data: 'nama_line', name: 'nama_line'
                         },
                         {
                             data: 'nama_customer', name: 'nama_customer'

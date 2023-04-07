@@ -45,10 +45,5 @@ class User extends Authenticatable
         );
     }
 
-    public function barang_keluars()
-    {
-        return $this->hasMany(
-            BarangKeluar::class,'users_id','id'
-        );
-    }
+   
 }

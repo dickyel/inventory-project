@@ -9,7 +9,7 @@ class BarangMasuk extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'tanggal_masuk_barang', 'nama_customer', 'model','rwo','rwo_qty','hc','plan_output','actual_output','set_up_time_plan','set_up_time_actual','set_up_time_var','running_time_plan','running_time_actual','running_time_var','total_plan','total_actual','remark','users_id','total_var'
+        'tanggal_masuk_barang','nama_line', 'nama_customer', 'model','rwo','rwo_qty','hc','plan_output','actual_output','set_up_time_plan','set_up_time_actual','set_up_time_var','running_time_plan','running_time_actual','running_time_var','total_plan','total_actual','remark','users_id','total_var'
     ];
 
     /**
@@ -28,10 +28,5 @@ class BarangMasuk extends Model
         );
     }
 
-    public function barang_keluars()
-    {
-        return $this->hasMany(
-            BarangKeluar::class,'barang_masuk_id','id'
-        );
-    }
+
 }

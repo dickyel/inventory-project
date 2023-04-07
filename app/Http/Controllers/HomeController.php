@@ -29,12 +29,12 @@ class HomeController extends Controller
     {
         $user = User::count();
         $barang_masuk = BarangMasuk::count();
-        $barang_keluar = BarangKeluar::count();   
+          
         return view('beranda',
             [
                 'user' => $user,
                 'barang_masuk' => $barang_masuk,
-                'barang_keluar' => $barang_keluar
+               
             ]
         );
     }

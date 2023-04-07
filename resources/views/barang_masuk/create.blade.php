@@ -37,7 +37,7 @@
                                         <label for="">Tanggal Masuk Barang</label>
                                         
                                         <input type="text" id="datepicker"
-                                        id="tanggal_masuk_barang"  name="tanggal_masuk_arang" class="form-control @error('tanggal_masuk_barang') is-invalid @enderror"/>
+                                        id="tanggal_masuk_barang"  name="tanggal_masuk_barang" class="form-control @error('tanggal_masuk_barang') is-invalid @enderror"/>
                                         @error('tanggal_barang_masuk')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
@@ -46,16 +46,22 @@
                                     </div>
                                 </div>
 
-                                <div class="col-md-6">
+                        
+                                <input type="hidden" name="users_id" value="{{ Auth::user()->id }}">
+                                       
+                                <div class="col-md-6 mt-4">
                                     <div class="form-group">
                                         <label for="">Nama Line</label>
-                                        <select name="users_id" class="form-control">
-                                            @foreach ($users as $user)
-                                            <option value="{{ $user->id }}">{{ $user->nama_line }}</option>
-                                            @endforeach
-                                        </select>
+                                        <input type="text"
+                                        id="nama_line"  name="nama_line" class="form-control @error('nama_line') is-invalid @enderror"/>
+                                        @error('nama_line')
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                        @enderror
                                     </div>
                                 </div>
+
 
                                 <div class="col-md-6 mt-4">
                                     <div class="form-group">
@@ -152,7 +158,7 @@
                                     <div class="form-group">
                                         <label for="">Set Up Time Plan</label>
                                         <input type="number"
-                                        id="set_up_time_plan"  name="set_up_time_plan" class="form-control @error('set_up_time_plan') is-invalid @enderror"/>
+                                        id="set_up_time_plan"  step="0.01" min="0" name="set_up_time_plan" class="form-control @error('set_up_time_plan') is-invalid @enderror"/>
                                         @error('set_up_time_plan')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
@@ -165,7 +171,7 @@
                                     <div class="form-group">
                                         <label for="">Set Up Time Actual</label>
                                         <input type="number"
-                                        id="set_up_time_actual"  name="set_up_time_actual" class="form-control @error('set_up_time_actual') is-invalid @enderror"/>
+                                        id="set_up_time_actual"  step="0.01" min="0"  name="set_up_time_actual" class="form-control @error('set_up_time_actual') is-invalid @enderror"/>
                                         @error('set_up_time_actual')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
@@ -191,7 +197,7 @@
                                     <div class="form-group">
                                         <label for="">Running Time Plan</label>
                                         <input type="number"
-                                        id="running_time_plan"  name="running_time_plan" class="form-control @error('running_time_plan') is-invalid @enderror"/>
+                                        id="running_time_plan"  step="0.01" min="0"  name="running_time_plan" class="form-control @error('running_time_plan') is-invalid @enderror"/>
                                         @error('running_time_plan')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
@@ -204,7 +210,7 @@
                                     <div class="form-group">
                                         <label for="">Running Time Actual</label>
                                         <input type="number"
-                                        id="running_time_actual"  name="running_time_actual" class="form-control @error('running_time_actual') is-invalid @enderror"/>
+                                        id="running_time_actual"  step="0.01" min="0"  name="running_time_actual" class="form-control @error('running_time_actual') is-invalid @enderror"/>
                                         @error('running_time_actual')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
@@ -217,7 +223,7 @@
                                     <div class="form-group">
                                         <label for="">Running Time Var</label>
                                         <input type="number"
-                                        id="running_time_var"  name="running_time_var" class="form-control @error('running_time_var') is-invalid @enderror"/>
+                                        id="running_time_var"  step="0.01" min="0"  name="running_time_var" class="form-control @error('running_time_var') is-invalid @enderror"/>
                                         @error('running_time_var')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
@@ -230,7 +236,7 @@
                                     <div class="form-group">
                                         <label for="">Total Plan</label>
                                         <input type="number"
-                                        id="total_plan"  name="total_plan" class="form-control @error('total_plan') is-invalid @enderror"/>
+                                        id="total_plan"  step="0.01" min="0"  name="total_plan" class="form-control @error('total_plan') is-invalid @enderror"/>
                                         @error('total_plan')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
@@ -244,7 +250,7 @@
                                     <div class="form-group">
                                         <label for="">Total Actual</label>
                                         <input type="number"
-                                        id="total_actual"  name="total_actual" class="form-control @error('total_actual') is-invalid @enderror"/>
+                                        id="total_actual"  step="0.01" min="0" name="total_actual" class="form-control @error('total_actual') is-invalid @enderror"/>
                                         @error('total_actual')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
@@ -257,7 +263,7 @@
                                     <div class="form-group">
                                         <label for="">Total Var</label>
                                         <input type="number"
-                                        id="total_var"  name="total_var" class="form-control @error('total_var') is-invalid @enderror"/>
+                                        id="total_var"  step="0.01" min="0"  name="total_var" class="form-control @error('total_var') is-invalid @enderror"/>
                                         @error('total_var')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
@@ -296,13 +302,13 @@
 @push('end-script')
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
 
-  <script>
-      
+<script>
+    
     $( function() {
         $( "#datepicker" ).datepicker({
         showButtonPanel: true,
         format: 'yyyy-mm-dd'
         });
     });
-    </script>
+</script>
 @endpush
