@@ -128,7 +128,7 @@
                                     <div class="form-group">
                                         <label for="">Plan Output</label>
                                         <input type="number"
-                                        id="plan_output" value="{{$item->plan_output}}"   name="plan_output" class="form-control @error('plan_output') is-invalid @enderror"/>
+                                        id="plan_output"step="0.01" min="0" value="{{$item->plan_output}}"   name="plan_output" class="form-control @error('plan_output') is-invalid @enderror"/>
                                         @error('plan_output')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
@@ -141,7 +141,7 @@
                                     <div class="form-group">
                                         <label for="">Actual Output</label>
                                         <input type="number"
-                                        id="actual_output" value="{{$item->actual_output}}"  name="actual_output" class="form-control @error('actual_output') is-invalid @enderror"/>
+                                        id="actual_output" step="0.01" min="0" value="{{$item->actual_output}}"  name="actual_output" class="form-control @error('actual_output') is-invalid @enderror"/>
                                         @error('actual_output')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>

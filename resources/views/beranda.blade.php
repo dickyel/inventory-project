@@ -10,7 +10,7 @@
         <div class="row">
             <div class="col-12">
                 <h2 class="content-title">Statistik</h2>
-                <h5 class="content-desc mb-4">Jumlah semua barang masuk dan barang keluar</h5>
+                <h5 class="content-desc mb-4">Jumlah semua laporan produksi dan user yang terdaftar</h5>
             </div>
 
             <div class="col-12 col-md-6 col-lg-4">
@@ -18,7 +18,7 @@
 
                     <div class="d-flex justify-content-between align-items-center">
                         <div class="d-flex flex-column justify-content-between align-items-start">
-                            <h5 class="content-desc">Jumlah Barang Masuk</h5>
+                            <h5 class="content-desc">Jumlah Laporan Masuk</h5>
 
                             <h3 class="statistics-value"> {{ $barang_masuk }} </h3>
                         </div>

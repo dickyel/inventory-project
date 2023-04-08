@@ -10,7 +10,7 @@
             <div class="row page-login d-flex align-item-center ">
                 <div class="section-left col-12 col-md-6">
                     
-                    <img src="./frontend/images/login (2).png" class="w-75 d-none d-sm-flex" alt="">
+                    <img src="./frontend/images/login.png" class="w-75 d-none d-sm-flex" alt="">
                 </div>
                 <div class="section-right  col-12 col-md-4">
                     <div class="card">

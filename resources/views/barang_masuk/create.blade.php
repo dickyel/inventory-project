@@ -145,7 +145,7 @@
                                     <div class="form-group">
                                         <label for="">Actual Output</label>
                                         <input type="number"
-                                        id="actual_output"  name="actual_output" class="form-control @error('actual_output') is-invalid @enderror"/>
+                                        id="actual_output" step="0.01" min="0" name="actual_output" class="form-control @error('actual_output') is-invalid @enderror"/>
                                         @error('actual_output')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
@@ -184,7 +184,7 @@
                                     <div class="form-group">
                                         <label for="">Set Up Time Var</label>
                                         <input type="number"
-                                        id="set_up_time_var"  name="set_up_time_var" class="form-control @error('set_up_time_var') is-invalid @enderror"/>
+                                        id="set_up_time_var" step="0.01" min="0" name="set_up_time_var" class="form-control @error('set_up_time_var') is-invalid @enderror"/>
                                         @error('set_up_time_var')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>

@@ -1,7 +1,7 @@
 @extends('dashboard')
 
 @section('title')
-    Halaman Tentang Index
+    Halaman User
 @endsection
 
 @section('content')

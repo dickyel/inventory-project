@@ -14,9 +14,9 @@
     class="content">
     <div class="row">
         <div class="col-12">
-            <h2 class="content-title">Barang Masuk </h2>
+            <h2 class="content-title">Laporan Produksi </h2>
             <p class="content-desc">
-                Daftar Barang  - barang yang masuk 
+                Daftar Laporan Produksi 
             </p>
         </div>
         
@@ -25,7 +25,7 @@
                 <div class="card">
                     <div class="card-body">
                         <a href="{{ route('add-barang-masuks') }}" class="btn btn-primary mb-3">
-                            + Tambah Barang Masuk
+                            + Tambah Produksi
                         </a>
                         <div class="table-responsive">
                             <table class="table table-hover scroll-horizontal-vertical w-100" id="crudTable">
@@ -86,7 +86,7 @@
                             extend: 'excelHtml5',
                             text: 'Export ke Excel',
                             title: 'Laporan Production' ,
-                            messageTop: 'Departement : Insert & Backend Production',
+                            messageTop: 'Departement : Backend Intraco',
                             excelStyles: [                      // Add an excelStyles definition
                                 {                 
                                     template: [

@@ -8,7 +8,7 @@ use Yajra\DataTables\Facades\DataTables;
 
 class UserController extends Controller
 {
-    //
+    //controllex menampilkan data - data terkait user
     public function index()
     {
         if (request()->ajax()) {
